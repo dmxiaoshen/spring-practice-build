@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.xyz.common.base.DefaultExceptionControllerAdvice,\
+com.xyz.common.base.rabbitmq.RabbitmqConfig,\
+com.xyz.common.base.executor.ExecutorConfig,\
+com.xyz.common.base.scheduled.ScheduledConfig,\
+com.xyz.common.base.redis.RedisConfig

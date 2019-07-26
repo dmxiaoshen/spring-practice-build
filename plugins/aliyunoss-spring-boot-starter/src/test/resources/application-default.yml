@@ -1,0 +1,11 @@
+aliyun-oss:
+  enabled: true
+  endpointPublicUrl: https://oss-cn-hangzhou.aliyuncs.com
+  #endpointInternalUrl: https://oss-cn-hangzhou-internal.aliyuncs.com
+  endpointInternalUrl: https://oss-cn-hangzhou.aliyuncs.com
+  accessKeyId: LTAIjCA9NcKSFz4H
+  accessKeySecret: xAaihPbfAg41VM7llG5WMpfTWiprFY
+  bucketName: pocketwallet-dev
+  client:
+    maxConnections: 1000
+    maxErrorRetry: 2

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xyz</groupId>
+    <artifactId>spring-practice-build</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+   <modules>
+       <module>plugins/aliyunoss-spring-boot-starter</module>
+       <module>plugins/mybatis-generate-web</module>
+       <module>plugins/mybatis-generate-tool</module>
+       <module>plugins/standalone-utils</module>
+       <module>parent</module>
+       <module>basics/common-base</module>
+       <module>basics/common-feign-client</module>
+       <module>basics/common-auth</module>
+       <module>services/service-demo</module>
+       <module>apps/app-base</module>
+       <module>apps/app-demo</module>
+       <module>gateway/springcloud-gateway</module>
+   </modules>
+</project>
