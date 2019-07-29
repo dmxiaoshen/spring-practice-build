@@ -1,4 +1,4 @@
-package com.xyz.app.demo.controller;
+package com.xyz.app.demo.mq;
 
 import com.xyz.common.base.rabbitmq.AbstractConsumer;
 import com.xyz.common.base.rabbitmq.CustomMQMessage;

@@ -55,3 +55,10 @@ server:
     uri-encoding: UTF-8
     accept-count: 2
 
+app:
+  swagger:
+    enable: true
+    description: 接口文档
+    version: 1.0
+    author: DEV
+

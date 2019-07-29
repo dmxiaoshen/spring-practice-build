@@ -10,9 +10,5 @@ spring:
 
 app:
   swagger:
-    enable: true
     basePackage: com.xyz.service.demo.controller
     title: service-demo
-    description: 接口文档
-    version: 1.0
-    author: DEV

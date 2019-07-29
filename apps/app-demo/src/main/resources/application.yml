@@ -27,3 +27,20 @@ server:
     max-http-post-size: 10485760
     uri-encoding: UTF-8
     accept-count: 2
+
+app:
+  login:
+    enable: true
+    url:
+      excludeUrls:
+      - /webjars/**
+      - /doc*
+      - /swagger*
+      - /v2/api-docs*
+      - /fav*
+      - /error*
+  swagger:
+    enable: true
+    description: 文档
+    version: 1.0
+    author: DEV

@@ -2,21 +2,7 @@ server:
   port: 8082
 
 app:
-  login:
-    enable: true
-    url:
-      excludeUrls:
-      - /webjars/**
-      - /doc*
-      - /swagger*
-      - /v2/api-docs*
-      - /fav*
-      - /error*
   swagger:
-    enable: true
     basePackage: com.xyz.app.demo.controller
     title: app-demo
-    description: 文档
-    version: 1.0
-    author: DEV
 
