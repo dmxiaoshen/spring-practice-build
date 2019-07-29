@@ -7,3 +7,12 @@ spring:
     username: root
     password: docker@2019!
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+app:
+  swagger:
+    enable: true
+    basePackage: com.xyz.service.demo.controller
+    title: service-demo
+    description: 接口文档
+    version: 1.0
+    author: DEV

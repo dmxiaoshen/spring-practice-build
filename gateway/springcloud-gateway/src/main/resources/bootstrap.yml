@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: springcloud-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.200.133.105:8848
+  profiles:
+    active: dev
