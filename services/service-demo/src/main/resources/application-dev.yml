@@ -7,6 +7,9 @@ spring:
     username: root
     password: docker@2019!
     driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    mongodb:
+      uri: mongodb://testA:docker%402019!@10.200.133.105:27017/app
 
 app:
   swagger:
