@@ -1,0 +1,8 @@
+qiniu:
+  enabled: true
+  bucket: club-life
+  prefix: https://qiniu.xblz.org
+  accessKey: U691UmTFuzccWD0qzR6A2Xbn5OwzPou_o3UoO8Dt
+  secretKey: SgD-8KBwI1medjtgHjTbDjizg_TDHUIiFbEMDhY_
+  tokenExpriy: 3600
+  policy: '{"mimeLimit": "image/jpeg;image/png;application/pdf"}'

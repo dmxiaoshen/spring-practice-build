@@ -1,11 +1,9 @@
 package com.xyz.service.demo;
 
 import com.github.pagehelper.PageInfo;
-import com.xiaouchina.common.utils.IdGenUtils;
-import com.xiaouchina.common.utils.JacksonUtils;
+import com.xyz.common.utils.JacksonUtils;
 import com.xyz.common.base.redis.RedisHelper;
 import com.xyz.common.base.util.SpringContextUtil;
-import com.xyz.service.demo.entity.Book;
 import com.xyz.service.demo.entity.Dict;
 import com.xyz.service.demo.query.DictPagination;
 import com.xyz.service.demo.query.TestTask;
@@ -16,8 +14,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.math.BigDecimal;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ServiceDemoApplication.class)

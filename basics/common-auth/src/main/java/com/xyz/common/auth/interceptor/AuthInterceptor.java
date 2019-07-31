@@ -1,7 +1,7 @@
 package com.xyz.common.auth.interceptor;
 
 
-import com.xiaouchina.common.utils.JwtUtils;
+import com.xyz.common.utils.JwtUtils;
 import com.xyz.common.auth.annotation.SkipLogin;
 import com.xyz.common.auth.common.CommonConstants;
 import com.xyz.common.auth.common.TokenHolder;

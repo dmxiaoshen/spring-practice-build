@@ -11,6 +11,8 @@
 
    <modules>
        <module>plugins/aliyunoss-spring-boot-starter</module>
+       <module>plugins/qiniu-spring-boot-starter</module>
+       <module>plugins/qcloud-spring-boot-starter</module>
        <module>plugins/mybatis-generate-web</module>
        <module>plugins/mybatis-generate-tool</module>
        <module>plugins/standalone-utils</module>

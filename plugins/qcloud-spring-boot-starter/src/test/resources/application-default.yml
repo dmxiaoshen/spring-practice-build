@@ -1,0 +1,12 @@
+qcloud:
+  enabled: true
+  appId: 1258982530
+  secretId: AKID1AEAwoaWXQ8raDrldKtGaifz82lGa8at
+  secretKey: vhGm9JF3enodGequsdz85rOo9YoTs59y
+  projectId: 0
+  engineModelType: 8k_0
+  callbackUrl: https://364ec4f0.ngrok.io/callback
+  channelNum: 1
+  resTextFormat: 0
+  resType: 1
+  sourceType: 0
