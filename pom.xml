@@ -20,7 +20,11 @@
        <module>basics/common-base</module>
        <module>basics/common-feign-client</module>
        <module>basics/common-auth</module>
+       <module>services/service-base</module>
        <module>services/service-demo</module>
+       <module>services/service-account</module>
+       <module>services/service-storage</module>
+       <module>services/service-order</module>
        <module>apps/app-base</module>
        <module>apps/app-demo</module>
        <module>gateway/springcloud-gateway</module>

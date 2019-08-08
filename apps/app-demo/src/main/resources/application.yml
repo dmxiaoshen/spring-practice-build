@@ -20,6 +20,10 @@ spring:
         min-idle: 0 #连接池中的最小空闲连接
     timeout: 10000ms #连接超时时间（毫秒）
 
+ribbon:
+  ConnectTimeout: 500
+  ReadTimeout: 10000
+
 server:
   tomcat:
     max-threads: 200 #默认是200

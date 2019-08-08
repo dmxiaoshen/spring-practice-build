@@ -14,6 +14,11 @@
     <name>app-base</name>
     <description>app项目基础</description>
 
+    <properties>
+        <seata.version>0.7.1</seata.version>
+        <spring-cloud-alibaba-seata.version>2.1.0.RELEASE</spring-cloud-alibaba-seata.version>
+    </properties>
+
 
     <dependencies>
         <dependency>
@@ -30,6 +35,24 @@
             <groupId>com.xyz</groupId>
             <artifactId>common-feign-client</artifactId>
             <version>${sub-item.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-alibaba-seata -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-seata</artifactId>
+            <version>${spring-cloud-alibaba-seata.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.seata</groupId>
+                    <artifactId>seata-spring</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-all</artifactId>
+            <version>${seata.version}</version>
         </dependency>
     </dependencies>
 

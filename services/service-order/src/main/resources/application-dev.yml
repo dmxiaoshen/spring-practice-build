@@ -1,0 +1,14 @@
+server:
+  port: 9092
+
+spring:
+  datasource:
+    url: jdbc:mysql://10.200.133.105:3306/db_order?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: docker@2019!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+app:
+  swagger:
+    basePackage: com.xyz.service.order.controller
+    title: service-order

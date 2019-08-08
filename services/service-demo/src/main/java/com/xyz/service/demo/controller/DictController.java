@@ -1,7 +1,7 @@
 package com.xyz.service.demo.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.xyz.common.base.entity.AbstractController;
+import com.xyz.service.base.controller.AbstractServiceController;
 import com.xyz.service.demo.entity.Dict;
 import com.xyz.service.demo.query.DictPagination;
 import com.xyz.service.demo.service.DictService;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/dict")
-public class DictController extends AbstractController {
+public class DictController extends AbstractServiceController {
 
     @Autowired
     private DictService dictService;

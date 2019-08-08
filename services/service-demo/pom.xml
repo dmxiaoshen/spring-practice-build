@@ -17,12 +17,7 @@
     <dependencies>
         <dependency>
             <groupId>com.xyz</groupId>
-            <artifactId>common-base</artifactId>
-            <version>${sub-item.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.xyz</groupId>
-            <artifactId>common-feign-client</artifactId>
+            <artifactId>service-base</artifactId>
             <version>${sub-item.version}</version>
         </dependency>
         <dependency>

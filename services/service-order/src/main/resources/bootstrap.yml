@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: service-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.200.133.105:8848
+      config:
+        enabled: false
+        server-addr: 10.200.133.105:8848
+        namespace: f4184229-4bb8-4857-9090-be57fc763237
+        file-extension: yaml
+        shared-dataids: service-base.yaml
+  profiles:
+    active: dev

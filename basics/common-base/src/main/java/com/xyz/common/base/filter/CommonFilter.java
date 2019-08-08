@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.*;
 import javax.servlet.FilterConfig;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Date;
 
@@ -17,11 +18,15 @@ public class CommonFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        log.info("==CommonFilter start");
+        String url = null;
+        if (request instanceof HttpServletRequest) {
+             url = ((HttpServletRequest)request).getRequestURL().toString();
+        }
+        log.info("==CommonFilter start url={}",url);
         long start = new Date().getTime();
         chain.doFilter(request, response);
         log.info("==CommonFilter 耗时:" + (new Date().getTime() - start));
-        log.info("==CommonFilter finish");
+        log.info("==CommonFilter finish url={}",url);
     }
 
     @Override
