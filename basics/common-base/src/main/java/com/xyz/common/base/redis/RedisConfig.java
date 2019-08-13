@@ -85,4 +85,9 @@ public class RedisConfig extends CachingConfigurerSupport {
 
         return template;
     }
+
+    @Bean
+    public RedisLockAspect redisLockAspect(){
+        return new RedisLockAspect();
+    }
 }

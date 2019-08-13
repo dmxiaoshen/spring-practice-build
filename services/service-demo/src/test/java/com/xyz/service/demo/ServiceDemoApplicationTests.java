@@ -1,6 +1,7 @@
 package com.xyz.service.demo;
 
 import com.github.pagehelper.PageInfo;
+import com.xyz.common.base.exception.LockException;
 import com.xyz.common.utils.JacksonUtils;
 import com.xyz.common.base.redis.RedisHelper;
 import com.xyz.common.base.util.SpringContextUtil;
@@ -15,12 +16,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.UUID;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ServiceDemoApplication.class)
 public class ServiceDemoApplicationTests {
 
     @Autowired
     private MongoService mongoService;
+    @Autowired
+    private DictService dictService;
 
     @Test
     public void contextLoads() {
@@ -55,6 +60,63 @@ public class ServiceDemoApplicationTests {
 //        System.out.println(b.getId());
         System.out.println(JacksonUtils.toJson(mongoService.get("25e2459d3fd34778a9e89afadfced9b4")));
 
+    }
+
+    @Test
+    public void testRedisLock(){
+        Dict dict = dictService.get("8ac621c4b1284c908ad68c65bf77fc96");
+//        for(int i=0;i<100;i++){
+//            dict.setDescription("redis lock "+i);
+//            dictService.update(dict);
+//        }
+
+        Thread a = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                dict.setDescription("redis a");
+                dictService.update(dict);
+            }
+        });
+        Thread b = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                dict.setDescription("redis b");
+                dictService.update(dict);
+            }
+        });
+        Thread c = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                dict.setDescription("redis c");
+                dictService.update(dict);
+            }
+        });
+        Thread d = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                dict.setDescription("redis d");
+                dictService.update(dict);
+            }
+        });
+        Thread e = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                dict.setDescription("redis e");
+                dictService.update(dict);
+            }
+        });
+        a.start();
+        b.start();
+        c.start();
+        d.start();
+        e.start();
+        while(true){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
 }

@@ -1,6 +1,8 @@
 package com.xyz.service.demo.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.xyz.common.base.annotation.RequestLock;
+import com.xyz.common.base.annotation.RequestLockKey;
 import com.xyz.service.base.controller.AbstractServiceController;
 import com.xyz.service.demo.entity.Dict;
 import com.xyz.service.demo.query.DictPagination;
@@ -29,7 +31,8 @@ public class DictController extends AbstractServiceController {
     }
 
     @GetMapping("/{id}")
-    public Dict get(@PathVariable("id")String id){
+    @RequestLock
+    public Dict get(@PathVariable("id")@RequestLockKey String id){
         return dictService.get(id);
     }
 

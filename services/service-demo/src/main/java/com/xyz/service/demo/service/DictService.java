@@ -1,6 +1,8 @@
 package com.xyz.service.demo.service;
 
 import com.github.pagehelper.PageInfo;
+import com.xyz.common.base.annotation.RequestLock;
+import com.xyz.common.base.annotation.RequestLockKey;
 import com.xyz.service.demo.dao.DictMapper;
 import com.xyz.service.demo.entity.Dict;
 import com.xyz.service.demo.query.DictPagination;
@@ -27,11 +29,22 @@ public class DictService {
     }
 
     @Transactional
+    @RequestLock
     public void update(Dict dict) {
         dictMapper.updateByPrimaryKeySelective(dict);
+        try {
+            Thread.sleep(100);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public Dict get(String id) {
+        try {
+            Thread.sleep(1000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return dictMapper.selectByPrimaryKey(id);
     }
 

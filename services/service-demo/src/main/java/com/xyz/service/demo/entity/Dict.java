@@ -1,10 +1,12 @@
 package com.xyz.service.demo.entity;
 
+import com.xyz.common.base.annotation.RequestLockKey;
 import com.xyz.common.base.entity.AbstractEntity;
 
 public class Dict extends AbstractEntity {
     private static final long serialVersionUID = -4015900269188594018L;
 
+    @RequestLockKey
     private String id;
 
     private String value;
