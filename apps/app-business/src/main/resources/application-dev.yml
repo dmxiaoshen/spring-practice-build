@@ -1,0 +1,8 @@
+server:
+  port: 8088
+
+app:
+  swagger:
+    basePackage: com.xyz.app.business.controller
+    title: app-business
+

@@ -9,26 +9,16 @@
         <relativePath>../../parent/</relativePath> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xyz</groupId>
-    <artifactId>app-demo</artifactId>
+    <artifactId>app-business</artifactId>
     <version>${sub-item.version}</version>
-    <name>app-demo</name>
-    <description>应用层示例</description>
+    <name>app-business</name>
+    <description>阿里分布式事务测试</description>
 
     <dependencies>
         <dependency>
             <groupId>com.xyz</groupId>
             <artifactId>app-base</artifactId>
             <version>${sub-item.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba.cloud</groupId>
-                    <artifactId>spring-cloud-alibaba-seata</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>io.seata</groupId>
-                    <artifactId>seata-all</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,5 +42,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

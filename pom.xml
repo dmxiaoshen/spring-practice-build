@@ -27,6 +27,7 @@
        <module>services/service-order</module>
        <module>apps/app-base</module>
        <module>apps/app-demo</module>
+       <module>apps/app-business</module>
        <module>gateway/springcloud-gateway</module>
    </modules>
 </project>
