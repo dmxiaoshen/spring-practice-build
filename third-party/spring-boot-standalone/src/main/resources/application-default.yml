@@ -1,0 +1,18 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: spring-boot-standalone
+  datasource:
+    url: jdbc:mysql://10.200.133.105:3306/spring_boot_standalone?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: docker@2019!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  activiti:
+    #自动部署验证设置:true-开启（默认）、false-关闭
+    check-process-definitions: false
+    #自动部署文件路径后缀
+  #   process-definition-location-prefix: classpath:/processes/
+  #   process-definition-location-suffixes:
+  #      - **.bpmn
+  #      - **.bpmn20.xml
