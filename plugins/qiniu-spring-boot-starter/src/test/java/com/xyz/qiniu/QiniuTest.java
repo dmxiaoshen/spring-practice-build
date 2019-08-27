@@ -53,4 +53,11 @@ public class QiniuTest {
         String url = "https://qiniu.xblz.org/tmp/wxbbe53b72be5e953b.o6zAJs3pX3l9eyN0TRpAwBEYvCYI.UaptCxwNCwV06937bf73a21eece6d6cd71e627db6b8f.durationTime=1395.mp3";
         System.out.println(QiniuSupport.privateUrl(x));
     }
+
+    @Test
+    public void sign(){
+        File file = new File("D:/temThirdServerSeal.png");
+        String url = QiniuSupport.put(".png",file,x->{return "temThirdServerSeal"+x;});
+        System.out.println(QiniuSupport.privateUrl(url));
+    }
 }
