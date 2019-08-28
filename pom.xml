@@ -30,6 +30,7 @@
        <module>apps/app-business</module>
        <module>gateway/springcloud-gateway</module>
        <module>third-party/java-demo</module>
+       <module>third-party/scala-demo</module>
        <module>third-party/spring-boot-standalone</module>
        <module>third-party/spring-boot-xxl-job-executor</module>
    </modules>
